@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sea Salt Eatery</title>
+    <link rel="shortcut icon" href="img/favicon-2.png">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .wrapper {
+        width: 1180px;
+        height: 4200px;
+        background-color: lightgrey;
+        position: relative;
+        margin: 0 auto; /* Centers text in container, which has relative positioning*/
+        color: white;
+        text-align: center;
+    }
+
+    nav {
+        width: 1200px;
+        height: 100px;
+        color: darkgray;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #section-01 {
+        width: 1200px;
+        height: 800px;
+        background-image: url("img/header-background.jpg");
+        color: lightcyan;
+        margin: 0 auto;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 16px;
+        padding: 25px;
+
+    }
+
+    #section-02 {
+        width: 1200px;
+        height: 800px;
+        background-image: url("img/about-background.png");
+        color: olive;
+        margin: 0 auto;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 16px;
+        padding: 25px;
+
+    }
+    #section-03 {
+        width: 1200px;
+        height: 800px;
+        background-image: url("img/menu-background.png");
+        color: cadetblue;
+        margin: 0 auto;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 16px;
+        padding: 25px;
+
+    }
+     #section-04 {
+        width: 1200px;
+        height: 800px;
+        background-color: #CEDCDB;
+        color: darkslategrey;
+        margin: 0 auto;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 16px;
+        padding: 25px;
+
+    }
+    #section-05 {
+        width: 1200px;
+        height: 800px;
+        background-color: white;
+        color: cadetblue;
+        margin: 0 auto;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 16px;
+        padding: 25px;
+        letter-spacing: 3px;
+        align-content: space-evenly;
+
+    }
+    #section-footer{
+        width: 1200px;
+        height: 250px;
+        background-color: darkslategrey;
+        color: white;
+        margin: 0 auto;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 16px;
+        padding: 25px;
+        align-content: space-evenly;
+
+    }
+    p#nav-section-01, p#nav-section-02, p#nav-section-03, p#nav-section-04, p#nav-section-05 {
+        display: inline ;
+        font-size: 18px;
+        font-family: 'Avenir Next', sans-serif;
+        font-kerning: auto;
+        font-variant: small-caps;
+        padding: 0 25px;
+        line-height: 100px;
+        letter-spacing: 3px;
+
+    }
+
+    a:link {
+        padding-top: 20px;
+        text-decoration: none;
+        color: white;
+
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        text-decoration: none;
+        font-weight: bold;
+
+    }
+
+    a:active {
+        text-decoration: lightgrey;
+        font-weight: bolder;
+
+    }
+
+    .footer {
+        color: white;
+        margin: 0 auto;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 16px;
+        text-align: center;
+        padding: 25px;
+        position: absolute;
+    }
+
+    .fish{
+        position: absolute;
+        top: 885px;
+        left: 739px;
+    }
+
+    .prawns{
+        position: absolute;
+        top: 1182px;
+        left: 582px;
+    }
+
+    .about-copy{
+        box-sizing: content-box;
+        object-position: left;
+        width: 350px;
+        padding-left: 150px;
+        padding-top: 150px;
+    }
+
+    .about-writing{
+        font-family: 'Avenir Next', sans-serif;
+        position: relative;
+        text-align: justify;
+        color: darkslategrey;
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 22px;
+    }
+
+    .about-header{
+        font-family: 'Avenir Next', sans-serif;
+        position: absolute;
+        left: 20px;
+        top: 1000px;
+        color: cadetblue;
+        font-size: 48px;
+        letter-spacing: 3px;
+        transform: rotate(-90deg);
+    }
+
+    .menu{
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 48px;
+        text-align: center;
+        letter-spacing: 3px;
+        padding-top: 100px;
+    }
+
+    .button-menu-drinks{
+        width: 300px;
+        height: 300px;
+        background-image: url("img/drinks-type.png");
+        background-size: contain;
+        margin: 0 auto;
+        float: left ;
+
+    }
+
+    .button-menu-dinner{
+        width: 300px;
+        height: 300px;
+        background-image: url("img/dinner-type.png");
+        background-size: contain;
+        position: relative;
+        margin: 0 auto ;
+        padding-top: 20px;
+    }
+
+    .button-menu-dessert{
+        width: 300px;
+        height: 300px;
+        background-image: url("img/dessert-type.png");
+        background-size: contain;
+        margin: 0 auto;
+        float: right;
+    }
+    .menu-buttons{
+        align-content: baseline;
+        padding-top: 100px;
+    }
+    .google-map{
+        position: relative;
+        float: left;
+        padding-top: 75px;
+        padding-left: 75px;
+    }
+    .location-hours{
+        padding-top: 150px;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 3px;
+
+    }
+    .ig-image1{
+        width: 325px;
+        height: 325px;
+        padding: 15px;
+        position: relative;
+        align-content: space-evenly;
+        align-items: baseline;
+        background-size: contain;
+        object-fit: contain;
+
+    }
+    .ig-image2{
+        width: 325px;
+        height: 325px;
+        padding: 15px;
+        position: relative;
+        align-content: space-evenly;
+        background-size: contain;
+        object-fit: contain;
+    }
+    .row{
+        padding-top: 25px;
+    }
+    .row2{
+        padding-top: 0px;
+    }
+    .social-title{
+        padding-top: 25px ;
+    }
+    h2{
+        font-family: 'Avenir Next', sans-serif;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+    .footer-button-fb{
+        width: 75px;
+        height: 75px;
+        padding: 15px;
+        position: absolute;
+        object-position: center;
+        left: 600px;
+
+    }
+    .footer-button-ig{
+        width: 75px;
+        height: 75px;
+        padding: 15px;
+        position: absolute;
+        left: 700px;
+
+    }
+    .footer-button-mail{
+        width: 75px;
+        height: 75px;
+        padding: 15px;
+        position: absolute;
+        left: 500px;
+
+
+    }
+    .logo-white{
+        position: relative;
+        float: right;
+        padding-top: 115px;
+        width: 600px;
+    }
+    .logo-footer{
+        position: relative;
+        float: left;
+        width: 300px;
+        padding-left: 25px;
+        padding-top: 50px;
+    }
+</style>
+
+<body>
+<div class="container">
+    <section class="section-one">
+
+    <div class="wrapper">
+
+        <section id="section-01">
+            <nav>
+            <a href="#section-02"><p id="nav-section-02">ABOUT US</p></a>
+            <a href="#section-03"><p id="nav-section-03">MENU</p></a>
+            <a href="#section-04"><p id="nav-section-04">LOCATION</p></a>
+            <a href="#section-05"><p id="nav-section-05">SOCIAL</p></a>
+            </nav>
+
+            <img src="img/logo-white.png" class="logo-white">
+        </section>
+
+        <section id="section-02">
+            <img src="img/Group 3.png" class= "fish"/>
+            <img src="img/Group 4.png" class= "prawns"  z-score="1"/>
+
+           <div class="about-copy">
+            <h1 class="about-header"> about us</h1>
+            <p class="about-writing">
+                Sea Salt Eatery is a seasonal restaurant located in Minnehaha Park. We open in the spring and close
+                temporarily for business in the late fall. Unfortunately, reservations are not accepted; we operate on a first come,
+                first served basis. We are a casual restaurant where you order your food at the counter and we deliver
+                your order to your table. We do not offer catering as we are a high volume restaurant with a smaller
+                kitchen and limited cooler/freezer space. Phone orders are not accepted; however we do offer most of
+                our menu to-go if you come in to place your order.
+            </p>
+           </div>
+        </section>
+
+        <section id="section-03">
+            <h1 class="menu"> our menu</h1>
+
+            <div class="menu-buttons">
+                <a href= "drink-menu.html"> <button class="button-menu-drinks"> </button></a>
+                <a href= "dinner-menu.html"> <button class="button-menu-dinner"> </button></a>
+                <a href= "dessert-menu.html"> <button class="button-menu-dessert"> </button></a>
+
+            </div>
+
+        </section>
+
+        <section id="section-04">
+
+          <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2825.356499302604!2d-93.2133536844608!3d44.9
+        1608527909837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f6290fcdac527b%3A0x488eda786bf64d19!2sSea%2
+        0Salt!5e0!3m2!1sen!2sus!4v1570634617604!5m2!1sen!2sus"
+        width="500" height="600" frameborder="1px" style="border:0" ></iframe>
+          </div>
+
+            <ul class="location-hours">
+                <h2>Location</h2>
+                <br>
+                <li>4825 Minnehaha Ave,</li>
+                <li>Minneapolis, MN 55417</li>
+                <br>
+                <br>
+                <h2>Hours</h2>
+                <br>
+                <li>April 1st - October 1st</li>
+                <li>Sunday-Saturday </li>
+                <li>11am-8pm</li>
+            </ul>
+
+        </section>
+
+
+        <section id="section-05">
+            <h2 class="social-title">FOLLOW US ON SOCIAL</h2>
+            <a href="https://www.instagram.com/seasalteatery/">FOLLOW US ON SOCIAL</a>
+
+            <div class="column">
+                <div class="row">
+                <img src="img/ig-bowl.jpg" alt="bowl" class="ig-image1" >
+                <img src="img/ig-fishchips.jpg" alt="fish" class="ig-image1">
+                <img src="img/ig-prawns.jpg" alt="prawns" class="ig-image1">
+                </div>
+            </div>
+            <div class="column">
+                <div class="row2">
+                <img src="img/ig-icecream.jpg" alt="ice cream" class="ig-image2">
+                 <img src="img/ig-paella.jpg" alt="paella" class="ig-image2">
+                 <img src="img/ig-lobster.jpg" alt="lobster" class="ig-image2">
+            </div>
+            </div>
+
+
+        </section>
+
+        <section id="section-footer">
+        <a href="#section-01"><p class="footer"> SCROLL BACK TO TOP</p></a>
+            <img src="img/logo-white.png" class="logo-footer">
+            <a href= "https://www.facebook.com/seasalteatery/"> <img src="img/facebook.png" class="footer-button-fb" alt="facebook"></a>
+            <a href= "https://www.instagram.com/seasalteatery/"> <img src="img/IG.png" class="footer-button-ig"> </a>
+            <a href= "dessert-menu.html"> <img src="img/Mail.png" class="footer-button-mail"> </a>
+        </section>
+
+    </div>
+</div><!-- End of container -->
+</body>
+
+
+<script>
+    $(document).ready(function () {
+// Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+// Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+// Prevent default anchor click behavior
+                event.preventDefault();
+
+// Store hash
+                var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+
+</html>
